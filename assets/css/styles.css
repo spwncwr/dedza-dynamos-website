@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+h1 {
+    color: #f4c300;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
