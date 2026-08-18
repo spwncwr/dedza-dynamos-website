@@ -1,7 +1,8 @@
-/* =====================================================
+/* =========================================================
    GOSHEN CITY DEDZA DYNAMOS FC
-   THE YELLOW BOYS — OFFICIAL WEBSITE
-   ===================================================== */
+   OFFICIAL WEBSITE
+   THE YELLOW BOYS
+========================================================= */
 
 :root {
     --yellow: #f4c300;
@@ -9,15 +10,15 @@
     --black: #050505;
     --dark: #0b0b0b;
     --dark-2: #111111;
-    --dark-3: #181818;
+    --dark-3: #171717;
+    --border: #292929;
     --white: #ffffff;
-    --gray: #b8b8b8;
-    --border: rgba(244, 195, 0, 0.18);
+    --muted: #a8a8a8;
 }
 
-/* =========================
+/* =========================================================
    RESET
-   ========================= */
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -27,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    background: var(--black);
 }
 
 body {
@@ -47,1014 +49,283 @@ img {
     display: block;
 }
 
-button {
-    font-family: inherit;
-}
-
-.container {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-}
-
-/* =========================
-   HEADER
-   ========================= */
-
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(5, 5, 5, 0.94);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-mark {
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-items: center;
-    background: var(--yellow);
-    color: var(--black);
-    font-weight: 1000;
-    font-size: 18px;
-    transform: skew(-8deg);
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-}
-
-.logo-text strong {
-    color: var(--white);
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.logo-text span {
-    color: var(--yellow);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    margin-top: 4px;
-}
-
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.desktop-nav a {
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-    transition: 0.25s ease;
-}
-
-.desktop-nav a:hover {
-    color: var(--yellow);
-}
-
-.nav-button {
-    background: var(--yellow);
-    color: var(--black);
-    padding: 12px 18px;
-    font-size: 12px;
-    font-weight: 900;
-    transition: 0.25s ease;
-}
-
-.nav-button:hover {
-    background: var(--white);
-    transform: translateY(-2px);
-}
-
-/* =========================
-   HERO
-   ========================= */
-
-.hero {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 75% 35%, rgba(244,195,0,0.18), transparent 30%),
-        linear-gradient(135deg, #050505 0%, #111111 55%, #191500 100%);
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.95),
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0.35)
-        );
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(
-            45deg,
-            transparent 0,
-            transparent 40px,
-            rgba(244,195,0,0.025) 40px,
-            rgba(244,195,0,0.025) 41px
-        );
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding-top: 80px;
-}
-
-.hero-label,
-.section-label {
-    color: var(--yellow);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    max-width: 900px;
-    font-size: clamp(50px, 9vw, 110px);
-    line-height: 0.92;
-    font-weight: 1000;
-    letter-spacing: -4px;
-    text-transform: uppercase;
-}
-
-.hero h1 span {
-    display: block;
-    color: var(--yellow);
-}
-
-.hero-description {
-    max-width: 650px;
-    margin-top: 28px;
-    color: #dddddd;
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 500;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 35px;
-}
-
-/* =========================
-   BUTTONS
-   ========================= */
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 13px 24px;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: 0.25s ease;
-}
-
-.button.primary {
-    background: var(--yellow);
-    color: var(--black);
-}
-
-.button.primary:hover {
-    background: var(--white);
-    transform: translateY(-3px);
-}
-
-.button.secondary {
-    border: 1px solid rgba(255,255,255,0.35);
-    color: var(--white);
-}
-
-.button.secondary:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
-}
-
-/* =========================
-   GENERAL SECTIONS
-   ========================= */
-
-section {
-    padding: 110px 0;
-}
-
-.club-section {
-    background: var(--dark);
-}
-
-.club-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-}
-
-h2 {
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 0.95;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-}
-
-h2 span {
-    display: block;
-    color: var(--yellow);
-}
-
-.club-text {
-    color: var(--gray);
-    font-size: 18px;
-}
-
-.club-text p + p {
-    margin-top: 22px;
-}
-
-.club-text strong {
-    color: var(--yellow);
-}
-
-/* =========================
-   SECTION HEADING
-   ========================= */
-
-.section-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 45px;
-}
-
-.text-link {
-    color: var(--yellow);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.text-link:hover {
-    color: var(--white);
-}
-
-/* =========================
-   SQUAD
-   ========================= */
-
-.squad-section {
-    background: #080808;
-}
-
-.squad-intro {
-    max-width: 600px;
-    color: var(--gray);
-    margin-top: 20px;
-}
-
-.squad-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-top: 45px;
-}
-
-.player-card {
-    background: var(--dark-3);
-    border: 1px solid #242424;
-    overflow: hidden;
-    transition: 0.3s ease;
-}
-
-.player-card:hover {
-    border-color: var(--yellow);
-    transform: translateY(-6px);
-}
-
-.player-photo {
-    min-height: 280px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.9),
-            transparent
-        ),
-        linear-gradient(145deg, #202020, #0c0c0c);
-}
-
-.player-photo span {
-    font-size: 80px;
-    font-weight: 1000;
-    color: rgba(244,195,0,0.18);
-}
-
-.player-info {
-    padding: 20px;
-}
-
-.player-number {
-    color: var(--yellow);
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.player-info h3 {
-    margin-top: 4px;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.player-position {
-    color: var(--gray);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* =========================
-   MATCHES
-   ========================= */
-
-.matches-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.96)),
-        #151515;
-}
-
-.match-card {
-    border: 1px solid var(--border);
-    background: var(--dark-2);
-}
-
-.match-status {
-    padding: 13px 20px;
-    border-bottom: 1px solid #222;
-    color: var(--yellow);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.match-content {
-    min-height: 280px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 30px;
-    padding: 45px;
-}
-
-.team {
-    text-align: center;
-}
-
-.team-badge {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 18px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--yellow);
-    color: var(--black);
-    font-size: 25px;
-    font-weight: 1000;
-}
-
-.team-badge.muted {
-    background: #292929;
-    color: #aaa;
-}
-
-.team h3 {
-    font-size: 25px;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.team h3 span {
-    display: block;
-    color: var(--yellow);
-}
-
-.match-info {
-    text-align: center;
-}
-
-.vs {
-    font-size: 42px;
-    font-weight: 1000;
-    color: var(--yellow);
-}
-
-.match-date {
-    color: white;
-    font-weight: 800;
-    margin-top: 10px;
-}
-
-.match-venue {
-    color: var(--gray);
-    font-size: 13px;
-}
-
-.match-footer {
-    padding: 18px 25px;
-    border-top: 1px solid #222;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    color: var(--gray);
-    font-size: 11px;
-    font-weight: 900;
-}
-
-/* =========================
-   NEWS
-   ========================= */
-
-.news-section {
-    background: var(--dark);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.news-card {
-    background: var(--dark-3);
-    border: 1px solid #252525;
-    overflow: hidden;
-    transition: 0.3s ease;
-}
-
-.news-card:hover {
-    border-color: var(--yellow);
-    transform: translateY(-5px);
-}
-
-.news-image {
-    height: 210px;
-    display: grid;
-    place-items: center;
-    background:
-        linear-gradient(
-            135deg,
-            #222,
-            #0a0a0a
-        );
-    color: rgba(244,195,0,0.25);
-    font-size: 50px;
-    font-weight: 1000;
-}
-
-.news-content {
-    padding: 25px;
-}
-
-.news-content > span {
-    color: var(--yellow);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.news-content h3 {
-    margin: 12px 0 20px;
-    font-size: 20px;
-    line-height: 1.2;
-}
-
-.news-content a {
-    color: var(--yellow);
-    font-size: 11px;
-    font-weight: 900;
-}
-
-/* =========================
-   GALLERY
-   ========================= */
-
-.gallery-section {
-    background: #050505;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-auto-rows: 230px;
-    gap: 12px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    background: #161616;
-    border: 1px solid #242424;
-}
-
-.gallery-item:first-child {
-    grid-row: span 2;
-}
-
-.gallery-item::after {
-    content: attr(data-title);
-    position: absolute;
-    left: 18px;
-    bottom: 15px;
-    color: white;
-    font-weight: 900;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-.gallery-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.8),
-            transparent 60%
-        );
-}
-
-.gallery-placeholder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    color: rgba(244,195,0,0.22);
-    font-size: 45px;
-    font-weight: 1000;
-}
-
-/* =========================
-   FAN CTA
-   ========================= */
-
-.cta-section {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(
-            circle at 70% 50%,
-            rgba(244,195,0,0.18),
-            transparent 35%
-        ),
-        #101010;
-}
-
-.cta-section .container {
-    text-align: center;
-}
-
-.cta-section h2 {
-    max-width: 800px;
-    margin: auto;
-}
-
-.cta-section > .container > p:not(.section-label) {
-    max-width: 600px;
-    margin: 25px auto;
-    color: var(--gray);
-    font-size: 18px;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-
-footer {
-    background: #030303;
-    border-top: 1px solid var(--border);
-    padding-top: 70px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 60px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.footer-logo strong {
-    display: block;
-}
-
-.footer-logo span {
-    display: block;
-    color: var(--yellow);
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-.footer-grid p {
-    color: #888;
-    margin-top: 18px;
-    font-size: 14px;
-}
-
-.footer-grid h4 {
-    color: var(--yellow);
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.footer-grid a {
-    display: block;
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 10px;
-    transition: 0.2s;
-}
-
-.footer-grid a:hover {
-    color: var(--yellow);
-}
-
-.copyright {
-    border-top: 1px solid #181818;
-    padding: 22px;
-    text-align: center;
-    color: #666;
-    font-size: 12px;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 900px) {
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .squad-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .club-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .nav-container {
-        min-height: 70px;
-    }
-
-    .logo-text strong {
-        font-size: 12px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-    .hero {
-        min-height: 90vh;
-    }
-
-    .hero h1 {
-        font-size: clamp(45px, 15vw, 75px);
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .match-content {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
-        gap: 25px;
-    }
-
-    .match-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .squad-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .player-photo {
-        min-height: 200px;
-    }
-
-    .player-info h3 {
-        font-size: 17px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 170px;
-    }
-
-    .gallery-item:first-child {
-        grid-row: span 1;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    h2 {
-        font-size: 45px;
-    }
-}/* =====================================================
-   GOSHEN CITY DEDZA DYNAMOS FC
-   THE YELLOW BOYS — OFFICIAL WEBSITE
-   ===================================================== */
-
-:root {
-    --yellow: #f4c300;
-    --yellow-light: #ffd83d;
-    --black: #050505;
-    --dark: #0b0b0b;
-    --dark-2: #111111;
-    --dark-3: #181818;
-    --white: #ffffff;
-    --gray: #b8b8b8;
-    --border: rgba(244, 195, 0, 0.18);
-}
-
-/* =========================
-   RESET
-   ========================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
+button,
 a {
-    color: inherit;
-    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-img {
-    width: 100%;
-    display: block;
-}
-
-button {
-    font-family: inherit;
-}
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 .container {
     width: min(1200px, 92%);
     margin: 0 auto;
 }
 
-/* =========================
+.section {
+    padding: 110px 0;
+}
+
+.section-number {
+    color: var(--yellow);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: var(--white);
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    display: block;
+    color: var(--yellow);
+}
+
+.section-copy {
+    max-width: 620px;
+}
+
+.section-copy p {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.section-copy strong {
+    color: var(--white);
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.section-intro {
+    max-width: 420px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.section-link {
+    color: var(--yellow);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.section-link:hover {
+    color: var(--white);
+}
+
+/* =========================================================
    HEADER
-   ========================= */
+========================================================= */
 
 .site-header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.94);
+    width: 100%;
+    background: rgba(5, 5, 5, 0.96);
+    border-bottom: 1px solid rgba(244, 195, 0, 0.25);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
 }
 
 .nav-container {
-    min-height: 78px;
+    min-height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
 }
 
-.logo {
+.brand {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
-.logo-mark {
+.brand-badge {
     width: 48px;
     height: 48px;
     display: grid;
     place-items: center;
     background: var(--yellow);
     color: var(--black);
-    font-weight: 1000;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 900;
     transform: skew(-8deg);
 }
 
-.logo-text {
+.brand-name {
     display: flex;
     flex-direction: column;
-    line-height: 1.05;
+    line-height: 1.1;
 }
 
-.logo-text strong {
+.brand-name strong {
     color: var(--white);
     font-size: 14px;
-    letter-spacing: 1px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
 }
 
-.logo-text span {
+.brand-name span {
     color: var(--yellow);
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 9px;
+    font-weight: 700;
     letter-spacing: 1.5px;
     margin-top: 4px;
 }
 
-.desktop-nav {
+.main-nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.desktop-nav a {
-    font-size: 13px;
+.main-nav a {
+    position: relative;
+    color: #d8d8d8;
+    font-size: 11px;
     font-weight: 800;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
-    letter-spacing: 0.7px;
-    transition: 0.25s ease;
+    transition: color 0.3s ease;
 }
 
-.desktop-nav a:hover {
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--yellow);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
     color: var(--yellow);
 }
 
-.nav-button {
-    background: var(--yellow);
-    color: var(--black);
-    padding: 12px 18px;
-    font-size: 12px;
-    font-weight: 900;
-    transition: 0.25s ease;
+.main-nav a:hover::after {
+    width: 100%;
 }
 
-.nav-button:hover {
+.header-button {
+    padding: 12px 18px;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.header-button:hover {
     background: var(--white);
     transform: translateY(-2px);
 }
 
-/* =========================
+/* =========================================================
    HERO
-   ========================= */
+========================================================= */
 
 .hero {
-    min-height: 100vh;
     position: relative;
+    min-height: calc(100vh - 82px);
+    min-height: 720px;
     display: flex;
     align-items: center;
     overflow: hidden;
+
     background:
-        radial-gradient(circle at 75% 35%, rgba(244,195,0,0.18), transparent 30%),
-        linear-gradient(135deg, #050505 0%, #111111 55%, #191500 100%);
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(244, 195, 0, 0.18),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #111111 55%,
+            #181818 100%
+        );
 }
 
-.hero::before {
-    content: "";
+.hero-background {
     position: absolute;
     inset: 0;
+
     background:
         linear-gradient(
-            90deg,
-            rgba(0,0,0,0.95),
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0.35)
+            120deg,
+            transparent 35%,
+            rgba(244, 195, 0, 0.25) 35.2%,
+            transparent 35.5%
+        ),
+        linear-gradient(
+            60deg,
+            transparent 60%,
+            rgba(255, 255, 255, 0.06) 60.2%,
+            transparent 60.5%
         );
+
+    opacity: 0.35;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
+
     background:
-        repeating-linear-gradient(
-            45deg,
-            transparent 0,
-            transparent 40px,
-            rgba(244,195,0,0.025) 40px,
-            rgba(244,195,0,0.025) 41px
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.98) 0%,
+            rgba(5, 5, 5, 0.76) 50%,
+            rgba(5, 5, 5, 0.35) 100%
         );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding-top: 80px;
+    padding: 100px 0;
 }
 
-.hero-label,
-.section-label {
+.eyebrow {
+    display: inline-block;
     color: var(--yellow);
     font-size: 12px;
     font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
     max-width: 900px;
-    font-size: clamp(50px, 9vw, 110px);
-    line-height: 0.92;
-    font-weight: 1000;
-    letter-spacing: -4px;
+    color: var(--white);
+    font-size: clamp(54px, 9vw, 110px);
+    font-weight: 950;
+    line-height: 0.88;
+    letter-spacing: -5px;
     text-transform: uppercase;
 }
 
@@ -1063,151 +334,114 @@ button {
     color: var(--yellow);
 }
 
-.hero-description {
-    max-width: 650px;
+.hero-tagline {
     margin-top: 28px;
-    color: #dddddd;
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 500;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
 }
 
-.hero-buttons {
+.hero-description {
+    max-width: 650px;
+    margin-top: 15px;
+    color: #c8c8c8;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-actions {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
     margin-top: 35px;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
-
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 48px;
-    padding: 13px 24px;
-    font-size: 12px;
+    padding: 14px 24px;
+    font-size: 11px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: 0.25s ease;
+    transition: 0.3s ease;
 }
 
-.button.primary {
+.button-primary {
     background: var(--yellow);
     color: var(--black);
 }
 
-.button.primary:hover {
+.button-primary:hover {
     background: var(--white);
     transform: translateY(-3px);
 }
 
-.button.secondary {
-    border: 1px solid rgba(255,255,255,0.35);
+.button-outline {
+    border: 1px solid #555;
     color: var(--white);
 }
 
-.button.secondary:hover {
+.button-outline:hover {
     border-color: var(--yellow);
     color: var(--yellow);
+    transform: translateY(-3px);
 }
 
-/* =========================
-   GENERAL SECTIONS
-   ========================= */
+.hero-scroll {
+    position: absolute;
+    right: 4%;
+    bottom: 35px;
+    z-index: 2;
 
-section {
-    padding: 110px 0;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    writing-mode: vertical-rl;
 }
+
+/* =========================================================
+   CLUB
+========================================================= */
 
 .club-section {
     background: var(--dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
-.club-grid {
+.two-column {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
 }
 
-h2 {
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 0.95;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team-section {
+    background: var(--black);
 }
 
-h2 span {
-    display: block;
-    color: var(--yellow);
-}
-
-.club-text {
-    color: var(--gray);
-    font-size: 18px;
-}
-
-.club-text p + p {
-    margin-top: 22px;
-}
-
-.club-text strong {
-    color: var(--yellow);
-}
-
-/* =========================
-   SECTION HEADING
-   ========================= */
-
-.section-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 45px;
-}
-
-.text-link {
-    color: var(--yellow);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.text-link:hover {
-    color: var(--white);
-}
-
-/* =========================
-   SQUAD
-   ========================= */
-
-.squad-section {
-    background: #080808;
-}
-
-.squad-intro {
-    max-width: 600px;
-    color: var(--gray);
-    margin-top: 20px;
-}
-
-.squad-grid {
+.team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
-    margin-top: 45px;
 }
 
 .player-card {
-    background: var(--dark-3);
-    border: 1px solid #242424;
+    background: var(--dark-2);
+    border: 1px solid var(--border);
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 0.35s ease;
 }
 
 .player-card:hover {
@@ -1215,57 +449,59 @@ h2 span {
     transform: translateY(-6px);
 }
 
-.player-photo {
-    min-height: 280px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.9),
-            transparent
-        ),
-        linear-gradient(145deg, #202020, #0c0c0c);
-}
+.player-image {
+    height: 280px;
+    display: grid;
+    place-items: center;
 
-.player-photo span {
-    font-size: 80px;
-    font-weight: 1000;
-    color: rgba(244,195,0,0.18);
+    color: #444;
+    font-size: 60px;
+    font-weight: 950;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(244, 195, 0, 0.2),
+            transparent 45%
+        ),
+        #151515;
 }
 
 .player-info {
-    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    border-top: 1px solid var(--border);
 }
 
 .player-number {
     color: var(--yellow);
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 900;
 }
 
-.player-info h3 {
-    margin-top: 4px;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.player-position {
-    color: var(--gray);
-    font-size: 12px;
-    text-transform: uppercase;
+.player-info small {
+    display: block;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
-/* =========================
-   MATCHES
-   ========================= */
+.player-info h3 {
+    margin-top: 3px;
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* =========================================================
+   MATCH CENTRE
+========================================================= */
 
 .matches-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.96)),
-        #151515;
+    background: var(--dark);
 }
 
 .match-card {
@@ -1273,96 +509,110 @@ h2 span {
     background: var(--dark-2);
 }
 
-.match-status {
-    padding: 13px 20px;
-    border-bottom: 1px solid #222;
-    color: var(--yellow);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.match-content {
-    min-height: 280px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+.match-top,
+.match-bottom {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    padding: 45px;
+    gap: 20px;
+    padding: 18px 25px;
+    background: #0d0d0d;
 }
 
-.team {
-    text-align: center;
+.match-top {
+    border-bottom: 1px solid var(--border);
 }
 
-.team-badge {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 18px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--yellow);
-    color: var(--black);
-    font-size: 25px;
-    font-weight: 1000;
+.match-bottom {
+    border-top: 1px solid var(--border);
 }
 
-.team-badge.muted {
-    background: #292929;
-    color: #aaa;
-}
-
-.team h3 {
-    font-size: 25px;
-    line-height: 1;
+.match-top span,
+.match-bottom span {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.team h3 span {
+.match-top span:first-child {
+    color: var(--yellow);
+}
+
+.match-teams {
+    min-height: 310px;
+
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 30px;
+}
+
+.match-team h3 {
+    margin-top: 18px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.match-team h3 span {
     display: block;
     color: var(--yellow);
 }
 
-.match-info {
-    text-align: center;
+.club-badge {
+    width: 100px;
+    height: 100px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto;
+
+    background: var(--yellow);
+    color: var(--black);
+
+    font-size: 28px;
+    font-weight: 950;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 8px rgba(244, 195, 0, 0.08);
 }
 
-.vs {
-    font-size: 42px;
-    font-weight: 1000;
+.opponent-badge {
+    background: #292929;
+    color: #888;
+}
+
+.match-middle strong {
+    display: block;
     color: var(--yellow);
+    font-size: 32px;
+    font-weight: 950;
 }
 
-.match-date {
-    color: white;
+.match-middle p {
+    margin-top: 12px;
+    color: #999;
+    font-size: 10px;
     font-weight: 800;
-    margin-top: 10px;
+    letter-spacing: 1px;
 }
 
-.match-venue {
-    color: var(--gray);
-    font-size: 13px;
-}
-
-.match-footer {
-    padding: 18px 25px;
-    border-top: 1px solid #222;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    color: var(--gray);
-    font-size: 11px;
-    font-weight: 900;
-}
-
-/* =========================
+/* =========================================================
    NEWS
-   ========================= */
+========================================================= */
 
 .news-section {
-    background: var(--dark);
+    background: var(--black);
 }
 
 .news-grid {
@@ -1372,10 +622,10 @@ h2 span {
 }
 
 .news-card {
-    background: var(--dark-3);
-    border: 1px solid #252525;
+    background: var(--dark-2);
+    border: 1px solid var(--border);
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 0.35s ease;
 }
 
 .news-card:hover {
@@ -1384,187 +634,250 @@ h2 span {
 }
 
 .news-image {
-    height: 210px;
-    display: grid;
-    place-items: center;
+    height: 220px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
     background:
         linear-gradient(
             135deg,
-            #222,
-            #0a0a0a
+            #252525,
+            #101010
         );
-    color: rgba(244,195,0,0.25);
-    font-size: 50px;
-    font-weight: 1000;
+}
+
+.news-image span {
+    color: var(--yellow);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .news-content {
     padding: 25px;
 }
 
-.news-content > span {
+.news-content small {
     color: var(--yellow);
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 .news-content h3 {
+    min-height: 80px;
     margin: 12px 0 20px;
+
+    color: var(--white);
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .news-content a {
-    color: var(--yellow);
-    font-size: 11px;
+    color: #888;
+    font-size: 10px;
     font-weight: 900;
+    letter-spacing: 1px;
 }
 
-/* =========================
+.news-content a:hover {
+    color: var(--yellow);
+}
+
+/* =========================================================
    GALLERY
-   ========================= */
+========================================================= */
 
 .gallery-section {
-    background: #050505;
+    background: var(--dark);
 }
 
 .gallery-grid {
     display: grid;
+
     grid-template-columns: 2fr 1fr 1fr;
-    grid-auto-rows: 230px;
+
+    grid-template-rows: 220px 220px;
+
     gap: 12px;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    background: #161616;
-    border: 1px solid #242424;
-}
+    display: flex;
+    align-items: flex-end;
 
-.gallery-item:first-child {
-    grid-row: span 2;
-}
+    padding: 25px;
 
-.gallery-item::after {
-    content: attr(data-title);
-    position: absolute;
-    left: 18px;
-    bottom: 15px;
-    color: white;
-    font-weight: 900;
+    color: var(--white);
+
     font-size: 12px;
-    letter-spacing: 1px;
-}
+    font-weight: 900;
+    letter-spacing: 2px;
 
-.gallery-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,0.8),
-            transparent 60%
+            135deg,
+            #252525,
+            #0e0e0e
         );
+
+    border: 1px solid var(--border);
+
+    transition: 0.3s ease;
 }
 
-.gallery-placeholder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    color: rgba(244,195,0,0.22);
-    font-size: 45px;
-    font-weight: 1000;
+.gallery-item:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
 }
 
-/* =========================
-   FAN CTA
-   ========================= */
+.gallery-item.large {
+    grid-row: span 2;
 
-.cta-section {
-    position: relative;
-    overflow: hidden;
     background:
         radial-gradient(
-            circle at 70% 50%,
-            rgba(244,195,0,0.18),
-            transparent 35%
+            circle at 50% 50%,
+            rgba(244, 195, 0, 0.18),
+            transparent 50%
         ),
-        #101010;
+        #111;
 }
 
-.cta-section .container {
+/* =========================================================
+   FANS
+========================================================= */
+
+.fans-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 130px 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(244, 195, 0, 0.18),
+            transparent 45%
+        ),
+        #080808;
+
+    border-top: 1px solid var(--border);
+}
+
+.fans-content {
     text-align: center;
 }
 
-.cta-section h2 {
-    max-width: 800px;
-    margin: auto;
+.fans-content h2 {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: var(--white);
+
+    font-size: clamp(50px, 8vw, 100px);
+
+    font-weight: 950;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
 }
 
-.cta-section > .container > p:not(.section-label) {
-    max-width: 600px;
-    margin: 25px auto;
-    color: var(--gray);
-    font-size: 18px;
+.fans-content h2 span {
+    display: block;
+    color: var(--yellow);
 }
 
-/* =========================
+.fans-content > p:not(.section-number) {
+    max-width: 550px;
+
+    margin: 25px auto 30px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+/* =========================================================
    FOOTER
-   ========================= */
+========================================================= */
 
 footer {
     background: #030303;
     border-top: 1px solid var(--border);
-    padding-top: 70px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 60px;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    padding: 75px 0;
 }
 
-.footer-logo {
+.footer-brand {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 20px;
 }
 
-.footer-logo strong {
+.footer-brand strong {
     display: block;
+    font-size: 14px;
 }
 
-.footer-logo span {
+.footer-brand span {
     display: block;
+
+    margin-top: 4px;
+
     color: var(--yellow);
-    font-size: 10px;
+
+    font-size: 9px;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
 .footer-grid p {
-    color: #888;
-    margin-top: 18px;
-    font-size: 14px;
+    max-width: 300px;
+    color: #777;
+    font-size: 13px;
 }
 
 .footer-grid h4 {
-    color: var(--yellow);
-    font-size: 11px;
-    letter-spacing: 2px;
     margin-bottom: 18px;
+
+    color: var(--yellow);
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
 }
 
 .footer-grid a {
     display: block;
-    color: #aaa;
-    font-size: 14px;
+
+    width: fit-content;
+
     margin-bottom: 10px;
-    transition: 0.2s;
+
+    color: #888;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
 }
 
 .footer-grid a:hover {
@@ -1572,116 +885,338 @@ footer {
 }
 
 .copyright {
-    border-top: 1px solid #181818;
-    padding: 22px;
+    padding: 20px;
+
+    border-top: 1px solid #151515;
+
+    color: #555;
+
     text-align: center;
-    color: #666;
-    font-size: 12px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
-    .desktop-nav {
+    .main-nav {
+        gap: 13px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+
+    .header-button {
         display: none;
     }
 
-    .squad-grid {
+    .two-column {
+        gap: 50px;
+    }
+
+    .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    /* HEADER */
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .brand-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .brand-name strong {
+        font-size: 11px;
+    }
+
+    .brand-name span {
+        font-size: 7px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+        line-height: 1.6;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 13vw, 68px);
+        letter-spacing: -3px;
+    }
+
+    .hero-tagline {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* SECTIONS */
+
+    .section-header {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    .section-link {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .section-title {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    /* CLUB */
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .section-copy p {
+        font-size: 16px;
+    }
+
+    /* TEAM */
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .player-image {
+        height: 190px;
+        font-size: 40px;
+    }
+
+    .player-info {
+        min-height: 85px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .player-number {
+        font-size: 22px;
+    }
+
+    .player-info h3 {
+        font-size: 10px;
+    }
+
+    /* MATCH */
+
+    .match-teams {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 20px;
+    }
+
+    .match-middle {
+        order: 2;
+    }
+
+    .match-team {
+        order: 1;
+    }
+
+    .match-team:last-child {
+        order: 3;
+    }
+
+    .match-top,
+    .match-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .match-top {
+        gap: 8px;
+    }
+
+    .match-bottom {
+        gap: 15px;
+    }
+
+    /* NEWS */
 
     .news-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .news-image {
+        height: 190px;
     }
 
-    .club-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .nav-container {
-        min-height: 70px;
-    }
-
-    .logo-text strong {
-        font-size: 12px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-    .hero {
-        min-height: 90vh;
-    }
-
-    .hero h1 {
-        font-size: clamp(45px, 15vw, 75px);
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .match-content {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
-        gap: 25px;
-    }
-
-    .match-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .squad-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .player-photo {
-        min-height: 200px;
-    }
-
-    .player-info h3 {
-        font-size: 17px;
-    }
+    /* GALLERY */
 
     .gallery-grid {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 170px;
+
+        grid-template-rows:
+            180px
+            180px
+            180px;
+
+        gap: 10px;
     }
 
-    .gallery-item:first-child {
+    .gallery-item.large {
+        grid-column: span 2;
         grid-row: span 1;
+    }
+
+    /* FANS */
+
+    .fans-section {
+        padding: 90px 0;
+    }
+
+    .fans-content h2 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .fans-content > p:not(.section-number) {
+        font-size: 15px;
+    }
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px 25px;
+
+        padding: 55px 0;
+    }
+
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-tagline {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+    }
+
+    .section-title {
+        font-size: 43px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-image {
+        height: 230px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 180px);
+    }
+
+    .gallery-item.large {
+        grid-column: auto;
+    }
+
+    .fans-content h2 {
+        font-size: 44px;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
     }
 
-    h2 {
-        font-size: 45px;
-    }
 }
