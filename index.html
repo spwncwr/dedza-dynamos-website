@@ -314,6 +314,7 @@
 </section>
 
 
+```html
 <!-- ================= MATCH CENTRE ================= -->
 
 <section class="matches section" id="matches">
@@ -321,28 +322,32 @@
     <div class="container">
 
         <div class="section-label">
-            03 / MATCHDAY
+            03 / MATCH CENTRE
         </div>
 
         <div class="section-heading">
 
-            <h2 class="section-title">
-                NEXT
-                <span>MATCH</span>
-            </h2>
+            <div>
+                <h2 class="section-title">
+                    NEXT
+                    <span>MATCH</span>
+                </h2>
+            </div>
 
             <a href="#matches" class="section-link">
-                FULL FIXTURES →
+                FIXTURES & RESULTS →
             </a>
 
         </div>
 
 
+        <!-- NEXT MATCH -->
+
         <div class="match-card">
 
             <div class="match-header">
 
-                <span>UPCOMING FIXTURE</span>
+                <span>NEXT FIXTURE</span>
 
                 <span>FDH BANK PREMIERSHIP</span>
 
@@ -358,8 +363,8 @@
                     </div>
 
                     <h3>
-                        DEDZA
-                        <span>DYNAMOS</span>
+                        GOSHEN CITY
+                        <span>DEDZA DYNAMOS</span>
                     </h3>
 
                 </div>
@@ -370,7 +375,11 @@
                     <strong>VS</strong>
 
                     <p>
-                        DATE TO BE ANNOUNCED
+                        SAT • 22 AUG 2026
+                    </p>
+
+                    <p>
+                        14:30
                     </p>
 
                 </div>
@@ -379,11 +388,12 @@
                 <div class="club-team">
 
                     <div class="team-badge opponent">
-                        FC
+                        EF
                     </div>
 
                     <h3>
-                        OPPONENT
+                        EKHAYA
+                        <span>FC</span>
                     </h3>
 
                 </div>
@@ -394,13 +404,71 @@
             <div class="match-footer">
 
                 <span>
-                    VENUE TO BE ANNOUNCED
+                    MPIRA STADIUM
                 </span>
 
                 <span>
-                    MATCH CENTRE
+                    DEDZA DYNAMOS
                 </span>
 
+            </div>
+
+        </div>
+
+
+        <!-- LAST RESULT -->
+
+        <div class="result-card">
+
+            <div class="result-header">
+
+                <span>LAST RESULT</span>
+
+                <span>25 JUL 2026</span>
+
+            </div>
+
+
+            <div class="result-body">
+
+                <div class="result-team">
+
+                    <strong>
+                        GOSHEN CITY
+                    </strong>
+
+                    <span>
+                        DEDZA DYNAMOS
+                    </span>
+
+                </div>
+
+
+                <div class="result-score">
+
+                    <strong>1 — 0</strong>
+
+                    <span>FULL TIME</span>
+
+                </div>
+
+
+                <div class="result-team opponent-result">
+
+                    <strong>
+                        FCB NYASA
+                    </strong>
+
+                    <span>
+                        BIG BULLETS
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="result-footer">
+                DEDZA STADIUM
             </div>
 
         </div>
@@ -408,6 +476,7 @@
     </div>
 
 </section>
+```
 
 
 <!-- ================= NEWS ================= -->
@@ -694,3 +763,118 @@
 
 </body>
 </html>
+```css
+/* ================= RESULT CARD ================= */
+
+.result-card {
+    margin-top: 25px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--dark-2);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 25px;
+    background: #0d0d0d;
+    border-bottom: 1px solid var(--border);
+}
+
+.result-header span {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.result-header span:first-child {
+    color: var(--yellow);
+}
+
+.result-body {
+    min-height: 190px;
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 35px;
+    text-align: center;
+}
+
+.result-team {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.result-team strong {
+    font-size: 20px;
+}
+
+.result-team span {
+    margin-top: 6px;
+    color: var(--yellow);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.opponent-result span {
+    color: #999;
+}
+
+.result-score strong {
+    display: block;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.result-score span {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.result-footer {
+    padding: 15px 25px;
+    border-top: 1px solid var(--border);
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* RESULT MOBILE */
+
+@media (max-width: 600px) {
+
+    .result-body {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .result-score {
+        order: 2;
+    }
+
+    .result-team:first-child {
+        order: 1;
+    }
+
+    .opponent-result {
+        order: 3;
+    }
+
+    .result-score strong {
+        font-size: 34px;
+    }
+
+}
+```
