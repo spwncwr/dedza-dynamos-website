@@ -7,18 +7,20 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Goshen City Dedza Dynamos FC — The Yellow Boys of Dedza, Malawi.">
+          content="Official website of Goshen City Dedza Dynamos FC — The Yellow Boys of Dedza, Malawi.">
 
-    <title>Goshen City Dedza Dynamos FC</title>
+    <meta name="theme-color"
+          content="#050505">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Goshen City Dedza Dynamos FC | The Yellow Boys</title>
+
+    <link rel="stylesheet"
+          href="assets/css/styles.css">
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
@@ -33,21 +35,30 @@
             </span>
         </a>
 
-        <nav class="desktop-nav">
+        <nav class="desktop-nav" aria-label="Main navigation">
+
             <a href="#home">Home</a>
             <a href="#club">Club</a>
             <a href="#team">Team</a>
             <a href="#matches">Matches</a>
             <a href="#news">News</a>
             <a href="#gallery">Gallery</a>
+            <a href="#fans">Fans</a>
             <a href="#contact">Contact</a>
+
         </nav>
+
+        <a href="#matches" class="header-match">
+            MATCH CENTRE
+        </a>
 
         <button
             class="menu-button"
             id="menuButton"
+            type="button"
             aria-label="Open navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="mobileNav">
 
             <span></span>
             <span></span>
@@ -57,7 +68,10 @@
 
     </div>
 
-    <nav class="mobile-nav" id="mobileNav">
+
+    <nav class="mobile-nav"
+         id="mobileNav"
+         aria-label="Mobile navigation">
 
         <a href="#home">Home</a>
         <a href="#club">Club</a>
@@ -65,6 +79,7 @@
         <a href="#matches">Matches</a>
         <a href="#news">News</a>
         <a href="#gallery">Gallery</a>
+        <a href="#fans">Fans</a>
         <a href="#contact">Contact</a>
 
     </nav>
@@ -72,23 +87,26 @@
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= MAIN ================= -->
 
 <main>
 
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
+    <div class="hero-pattern"></div>
 
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
 
-        <p class="hero-label">
-            FDH BANK PREMIERSHIP
-            <span>•</span>
-            DEDZA, MALAWI
-        </p>
+        <div class="hero-label">
+            <span>FDH BANK PREMIERSHIP</span>
+            <i></i>
+            <span>DEDZA, MALAWI</span>
+        </div>
 
         <h1>
             GOSHEN CITY
@@ -101,18 +119,20 @@
 
         <p class="hero-description">
             From Dedza to Africa.
-            A football club built on ambition,
+            A club built on ambition,
             resilience and community.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#matches" class="btn btn-yellow">
+            <a href="#matches"
+               class="btn btn-yellow">
                 NEXT MATCH
             </a>
 
-            <a href="#club" class="btn btn-outline">
-                OUR STORY
+            <a href="#club"
+               class="btn btn-outline">
+                DISCOVER THE CLUB
             </a>
 
         </div>
@@ -122,9 +142,7 @@
     <div class="hero-bottom">
 
         <span>DEDZA</span>
-
         <span>THE YELLOW BOYS</span>
-
         <span>MALAWI</span>
 
     </div>
@@ -132,11 +150,9 @@
 </section>
 
 
-<!-- =========================
-     CLUB INTRO
-========================= -->
+<!-- ================= CLUB ================= -->
 
-<section class="club" id="club">
+<section class="club section" id="club">
 
     <div class="container">
 
@@ -148,7 +164,7 @@
 
             <div>
 
-                <h2>
+                <h2 class="section-title">
                     FROM DEDZA
                     <span>TO AFRICA.</span>
                 </h2>
@@ -165,16 +181,15 @@
 
                 <p>
                     Known as <strong>The Yellow Boys</strong>,
-                    the club is building an identity rooted in
-                    discipline, community and competitive
-                    ambition.
+                    the club is building a football identity
+                    rooted in discipline, community and
+                    competitive ambition.
                 </p>
 
                 <p>
                     Our mission is to develop football talent,
-                    inspire young people and represent Dedza
-                    proudly on the national and international
-                    stage.
+                    inspire young people and proudly represent
+                    Dedza on the national and international stage.
                 </p>
 
             </div>
@@ -186,11 +201,9 @@
 </section>
 
 
-<!-- =========================
-     TEAM
-========================= -->
+<!-- ================= TEAM ================= -->
 
-<section class="team" id="team">
+<section class="team section" id="team">
 
     <div class="container">
 
@@ -202,7 +215,7 @@
                     02 / THE SQUAD
                 </div>
 
-                <h2>
+                <h2 class="section-title">
                     FIRST
                     <span>TEAM</span>
                 </h2>
@@ -216,6 +229,7 @@
 
         </div>
 
+
         <div class="players">
 
             <article class="player">
@@ -225,8 +239,13 @@
                 </div>
 
                 <div class="player-details">
+
                     <small>GOALKEEPER</small>
-                    <h3>FIRST TEAM</h3>
+
+                    <h3>
+                        FIRST TEAM
+                    </h3>
+
                 </div>
 
             </article>
@@ -239,8 +258,13 @@
                 </div>
 
                 <div class="player-details">
+
                     <small>DEFENDER</small>
-                    <h3>FIRST TEAM</h3>
+
+                    <h3>
+                        FIRST TEAM
+                    </h3>
+
                 </div>
 
             </article>
@@ -253,8 +277,13 @@
                 </div>
 
                 <div class="player-details">
+
                     <small>MIDFIELDER</small>
-                    <h3>FIRST TEAM</h3>
+
+                    <h3>
+                        FIRST TEAM
+                    </h3>
+
                 </div>
 
             </article>
@@ -267,8 +296,13 @@
                 </div>
 
                 <div class="player-details">
+
                     <small>FORWARD</small>
-                    <h3>FIRST TEAM</h3>
+
+                    <h3>
+                        FIRST TEAM
+                    </h3>
+
                 </div>
 
             </article>
@@ -280,11 +314,9 @@
 </section>
 
 
-<!-- =========================
-     MATCH
-========================= -->
+<!-- ================= MATCH CENTRE ================= -->
 
-<section class="matches" id="matches">
+<section class="matches section" id="matches">
 
     <div class="container">
 
@@ -294,12 +326,12 @@
 
         <div class="section-heading">
 
-            <h2>
+            <h2 class="section-title">
                 NEXT
                 <span>MATCH</span>
             </h2>
 
-            <a href="#matches">
+            <a href="#matches" class="section-link">
                 FULL FIXTURES →
             </a>
 
@@ -378,11 +410,9 @@
 </section>
 
 
-<!-- =========================
-     NEWS
-========================= -->
+<!-- ================= NEWS ================= -->
 
-<section class="news" id="news">
+<section class="news section" id="news">
 
     <div class="container">
 
@@ -392,12 +422,12 @@
 
         <div class="section-heading">
 
-            <h2>
+            <h2 class="section-title">
                 LATEST
                 <span>NEWS</span>
             </h2>
 
-            <a href="#news">
+            <a href="#news" class="section-link">
                 ALL NEWS →
             </a>
 
@@ -409,7 +439,7 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    CLUB
+                    <span>CLUB</span>
                 </div>
 
                 <div class="news-content">
@@ -422,7 +452,7 @@
                         Dedza Dynamos FC.
                     </h3>
 
-                    <a href="#">
+                    <a href="#news">
                         READ STORY →
                     </a>
 
@@ -434,7 +464,7 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    MATCHDAY
+                    <span>MATCHDAY</span>
                 </div>
 
                 <div class="news-content">
@@ -446,7 +476,7 @@
                         throughout the season.
                     </h3>
 
-                    <a href="#">
+                    <a href="#matches">
                         READ STORY →
                     </a>
 
@@ -458,7 +488,7 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    COMMUNITY
+                    <span>COMMUNITY</span>
                 </div>
 
                 <div class="news-content">
@@ -470,7 +500,7 @@
                         the future of Dedza.
                     </h3>
 
-                    <a href="#">
+                    <a href="#club">
                         READ STORY →
                     </a>
 
@@ -485,11 +515,9 @@
 </section>
 
 
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- ================= GALLERY ================= -->
 
-<section class="gallery" id="gallery">
+<section class="gallery section" id="gallery">
 
     <div class="container">
 
@@ -499,10 +527,14 @@
 
         <div class="section-heading">
 
-            <h2>
-                YELLOW
-                <span>BOYS</span>
-            </h2>
+            <div>
+
+                <h2 class="section-title">
+                    YELLOW
+                    <span>BOYS</span>
+                </h2>
+
+            </div>
 
             <p>
                 Moments from the club,
@@ -514,24 +546,24 @@
 
         <div class="gallery-grid">
 
-            <div class="gallery-main">
-                MATCHDAY
+            <div class="gallery-item gallery-main">
+                <span>MATCHDAY</span>
             </div>
 
-            <div>
-                THE TEAM
+            <div class="gallery-item">
+                <span>THE TEAM</span>
             </div>
 
-            <div>
-                THE FANS
+            <div class="gallery-item">
+                <span>THE FANS</span>
             </div>
 
-            <div>
-                DEDZA
+            <div class="gallery-item">
+                <span>DEDZA</span>
             </div>
 
-            <div>
-                YELLOW BOYS
+            <div class="gallery-item">
+                <span>YELLOW BOYS</span>
             </div>
 
         </div>
@@ -541,13 +573,11 @@
 </section>
 
 
-<!-- =========================
-     FANS
-========================= -->
+<!-- ================= FANS ================= -->
 
-<section class="fans">
+<section class="fans" id="fans">
 
-    <div class="container">
+    <div class="container fans-content">
 
         <div class="section-label">
             06 / THE YELLOW BOYS
@@ -566,7 +596,7 @@
         <a
             href="https://www.facebook.com/profile.php?id=100063608826961"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="btn btn-yellow">
 
             FOLLOW US ON FACEBOOK
@@ -581,15 +611,13 @@
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer id="contact">
 
     <div class="container footer-grid">
 
-        <div>
+        <div class="footer-about">
 
             <div class="footer-logo">
 
@@ -629,7 +657,7 @@
             <a
                 href="https://www.facebook.com/profile.php?id=100063608826961"
                 target="_blank"
-                rel="noopener">
+                rel="noopener noreferrer">
 
                 Facebook
 
