@@ -7,63 +7,57 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Official website of Goshen City Dedza Dynamos FC — The Yellow Boys of Dedza, Malawi.">
+          content="Goshen City Dedza Dynamos FC — The Yellow Boys of Dedza, Malawi.">
 
-    <title>Goshen City Dedza Dynamos FC | The Yellow Boys</title>
+    <title>Goshen City Dedza Dynamos FC</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-<header class="site-header">
+<header class="header">
 
-    <div class="container nav-container">
+    <div class="container header-inner">
 
-        <a href="#home" class="brand">
+        <a href="#home" class="logo">
+            <span class="logo-mark">DD</span>
 
-            <div class="brand-badge">
-                DD
-            </div>
-
-            <div class="brand-name">
+            <span class="logo-text">
                 <strong>DEDZA DYNAMOS</strong>
-                <span>GOSHEN CITY FC</span>
-            </div>
-
+                <small>GOSHEN CITY FC</small>
+            </span>
         </a>
 
-        <nav class="main-nav">
-
+        <nav class="desktop-nav">
             <a href="#home">Home</a>
             <a href="#club">Club</a>
             <a href="#team">Team</a>
             <a href="#matches">Matches</a>
             <a href="#news">News</a>
             <a href="#gallery">Gallery</a>
-            <a href="#fans">Fans</a>
             <a href="#contact">Contact</a>
-
         </nav>
 
-        <a href="#matches" class="header-button">
-            MATCH CENTRE
-        </a>
-
         <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-label="Open menu">
-            ☰
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
 
-    <!-- MOBILE MENU -->
-
-    <div id="mobileMenu" class="mobile-menu">
+    <nav class="mobile-nav" id="mobileNav">
 
         <a href="#home">Home</a>
         <a href="#club">Club</a>
@@ -71,229 +65,210 @@
         <a href="#matches">Matches</a>
         <a href="#news">News</a>
         <a href="#gallery">Gallery</a>
-        <a href="#fans">Fans</a>
         <a href="#contact">Contact</a>
 
-    </div>
+    </nav>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
 <main>
 
-<section id="home" class="hero">
+<section class="hero" id="home">
 
-    <div class="hero-background"></div>
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
 
-        <p class="eyebrow">
-            FDH BANK PREMIERSHIP · DEDZA · MALAWI
+        <p class="hero-label">
+            FDH BANK PREMIERSHIP
+            <span>•</span>
+            DEDZA, MALAWI
         </p>
 
         <h1>
             GOSHEN CITY
-            <span>DEDZA DYNAMOS</span>
+            <strong>DEDZA DYNAMOS</strong>
         </h1>
 
-        <p class="hero-tagline">
+        <p class="hero-subtitle">
             THE YELLOW BOYS
         </p>
 
         <p class="hero-description">
             From Dedza to Africa.
-            Built on ambition, resilience and community.
+            A football club built on ambition,
+            resilience and community.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-buttons">
 
-            <a href="#matches"
-               class="button button-primary">
+            <a href="#matches" class="btn btn-yellow">
                 NEXT MATCH
             </a>
 
-            <a href="#club"
-               class="button button-outline">
-                DISCOVER THE CLUB
+            <a href="#club" class="btn btn-outline">
+                OUR STORY
             </a>
 
         </div>
 
     </div>
 
-    <div class="hero-scroll">
-        SCROLL TO EXPLORE
-    </div>
+    <div class="hero-bottom">
 
-</section>
+        <span>DEDZA</span>
 
+        <span>THE YELLOW BOYS</span>
 
-<!-- ================= CLUB ================= -->
-
-<section id="club" class="section club-section">
-
-    <div class="container two-column">
-
-        <div>
-
-            <p class="section-number">
-                01 / THE CLUB
-            </p>
-
-            <h2 class="section-title">
-                FROM DEDZA
-                <span>TO AFRICA.</span>
-            </h2>
-
-        </div>
-
-        <div class="section-copy">
-
-            <p>
-                <strong>
-                    Goshen City Dedza Dynamos FC
-                </strong>
-                represents the passion, ambition and football
-                culture of Dedza, Malawi.
-            </p>
-
-            <p>
-                Known as <strong>The Yellow Boys</strong>,
-                the club continues to build a football identity
-                rooted in community, discipline and competitive
-                ambition.
-            </p>
-
-            <p>
-                Our vision is to develop football talent,
-                inspire young people and proudly represent
-                Dedza on the national and international stage.
-            </p>
-
-        </div>
+        <span>MALAWI</span>
 
     </div>
 
 </section>
 
 
-<!-- ================= TEAM ================= -->
+<!-- =========================
+     CLUB INTRO
+========================= -->
 
-<section id="team" class="section team-section">
+<section class="club" id="club">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-label">
+            01 / THE CLUB
+        </div>
+
+        <div class="club-grid">
 
             <div>
 
-                <p class="section-number">
-                    02 / THE SQUAD
+                <h2>
+                    FROM DEDZA
+                    <span>TO AFRICA.</span>
+                </h2>
+
+            </div>
+
+            <div class="club-text">
+
+                <p class="lead">
+                    Goshen City Dedza Dynamos FC represents
+                    the passion, ambition and football culture
+                    of Dedza, Malawi.
                 </p>
 
-                <h2 class="section-title">
+                <p>
+                    Known as <strong>The Yellow Boys</strong>,
+                    the club is building an identity rooted in
+                    discipline, community and competitive
+                    ambition.
+                </p>
+
+                <p>
+                    Our mission is to develop football talent,
+                    inspire young people and represent Dedza
+                    proudly on the national and international
+                    stage.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TEAM
+========================= -->
+
+<section class="team" id="team">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    02 / THE SQUAD
+                </div>
+
+                <h2>
                     FIRST
                     <span>TEAM</span>
                 </h2>
 
             </div>
 
-            <p class="section-intro">
+            <p>
                 Meet the players representing
                 Goshen City Dedza Dynamos FC.
             </p>
 
         </div>
 
+        <div class="players">
 
-        <div class="team-grid">
+            <article class="player">
 
-            <article class="player-card">
-
-                <div class="player-image">
-                    GK
+                <div class="player-photo">
+                    <span>01</span>
                 </div>
 
-                <div class="player-info">
-
-                    <span class="player-number">
-                        01
-                    </span>
-
-                    <div>
-                        <small>POSITION</small>
-                        <h3>GOALKEEPER</h3>
-                    </div>
-
+                <div class="player-details">
+                    <small>GOALKEEPER</small>
+                    <h3>FIRST TEAM</h3>
                 </div>
 
             </article>
 
 
-            <article class="player-card">
+            <article class="player">
 
-                <div class="player-image">
-                    DF
+                <div class="player-photo">
+                    <span>02</span>
                 </div>
 
-                <div class="player-info">
-
-                    <span class="player-number">
-                        02
-                    </span>
-
-                    <div>
-                        <small>POSITION</small>
-                        <h3>DEFENDER</h3>
-                    </div>
-
+                <div class="player-details">
+                    <small>DEFENDER</small>
+                    <h3>FIRST TEAM</h3>
                 </div>
 
             </article>
 
 
-            <article class="player-card">
+            <article class="player">
 
-                <div class="player-image">
-                    MF
+                <div class="player-photo">
+                    <span>07</span>
                 </div>
 
-                <div class="player-info">
-
-                    <span class="player-number">
-                        07
-                    </span>
-
-                    <div>
-                        <small>POSITION</small>
-                        <h3>MIDFIELDER</h3>
-                    </div>
-
+                <div class="player-details">
+                    <small>MIDFIELDER</small>
+                    <h3>FIRST TEAM</h3>
                 </div>
 
             </article>
 
 
-            <article class="player-card">
+            <article class="player">
 
-                <div class="player-image">
-                    FW
+                <div class="player-photo">
+                    <span>09</span>
                 </div>
 
-                <div class="player-info">
-
-                    <span class="player-number">
-                        09
-                    </span>
-
-                    <div>
-                        <small>POSITION</small>
-                        <h3>FORWARD</h3>
-                    </div>
-
+                <div class="player-details">
+                    <small>FORWARD</small>
+                    <h3>FIRST TEAM</h3>
                 </div>
 
             </article>
@@ -305,29 +280,26 @@
 </section>
 
 
-<!-- ================= MATCH CENTRE ================= -->
+<!-- =========================
+     MATCH
+========================= -->
 
-<section id="matches" class="section matches-section">
+<section class="matches" id="matches">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-label">
+            03 / MATCHDAY
+        </div>
 
-            <div>
+        <div class="section-heading">
 
-                <p class="section-number">
-                    03 / MATCHDAY
-                </p>
+            <h2>
+                NEXT
+                <span>MATCH</span>
+            </h2>
 
-                <h2 class="section-title">
-                    NEXT
-                    <span>MATCH</span>
-                </h2>
-
-            </div>
-
-            <a href="#matches"
-               class="section-link">
+            <a href="#matches">
                 FULL FIXTURES →
             </a>
 
@@ -336,24 +308,20 @@
 
         <div class="match-card">
 
-            <div class="match-top">
+            <div class="match-header">
 
-                <span>
-                    UPCOMING FIXTURE
-                </span>
+                <span>UPCOMING FIXTURE</span>
 
-                <span>
-                    FDH BANK PREMIERSHIP
-                </span>
+                <span>FDH BANK PREMIERSHIP</span>
 
             </div>
 
 
-            <div class="match-teams">
+            <div class="match-body">
 
-                <div class="match-team">
+                <div class="club-team">
 
-                    <div class="club-badge">
+                    <div class="team-badge">
                         DD
                     </div>
 
@@ -365,11 +333,9 @@
                 </div>
 
 
-                <div class="match-middle">
+                <div class="versus">
 
-                    <strong>
-                        VS
-                    </strong>
+                    <strong>VS</strong>
 
                     <p>
                         DATE TO BE ANNOUNCED
@@ -378,9 +344,9 @@
                 </div>
 
 
-                <div class="match-team">
+                <div class="club-team">
 
-                    <div class="club-badge opponent-badge">
+                    <div class="team-badge opponent">
                         FC
                     </div>
 
@@ -393,7 +359,7 @@
             </div>
 
 
-            <div class="match-bottom">
+            <div class="match-footer">
 
                 <span>
                     VENUE TO BE ANNOUNCED
@@ -412,29 +378,26 @@
 </section>
 
 
-<!-- ================= NEWS ================= -->
+<!-- =========================
+     NEWS
+========================= -->
 
-<section id="news" class="section news-section">
+<section class="news" id="news">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-label">
+            04 / CLUB NEWS
+        </div>
 
-            <div>
+        <div class="section-heading">
 
-                <p class="section-number">
-                    04 / CLUB NEWS
-                </p>
+            <h2>
+                LATEST
+                <span>NEWS</span>
+            </h2>
 
-                <h2 class="section-title">
-                    LATEST
-                    <span>NEWS</span>
-                </h2>
-
-            </div>
-
-            <a href="#news"
-               class="section-link">
+            <a href="#news">
                 ALL NEWS →
             </a>
 
@@ -446,18 +409,16 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    <span>CLUB</span>
+                    CLUB
                 </div>
 
                 <div class="news-content">
 
-                    <small>
-                        CLUB
-                    </small>
+                    <small>CLUB</small>
 
                     <h3>
-                        Welcome to the new digital
-                        home of Goshen City
+                        Welcome to the official
+                        digital home of Goshen City
                         Dedza Dynamos FC.
                     </h3>
 
@@ -473,14 +434,12 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    <span>MATCHDAY</span>
+                    MATCHDAY
                 </div>
 
                 <div class="news-content">
 
-                    <small>
-                        MATCH
-                    </small>
+                    <small>MATCHDAY</small>
 
                     <h3>
                         Follow The Yellow Boys
@@ -499,14 +458,12 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    <span>COMMUNITY</span>
+                    COMMUNITY
                 </div>
 
                 <div class="news-content">
 
-                    <small>
-                        COMMUNITY
-                    </small>
+                    <small>COMMUNITY</small>
 
                     <h3>
                         Football, community and
@@ -528,30 +485,28 @@
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =========================
+     GALLERY
+========================= -->
 
-<section id="gallery" class="section gallery-section">
+<section class="gallery" id="gallery">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="section-label">
+            05 / CLUB GALLERY
+        </div>
 
-            <div>
+        <div class="section-heading">
 
-                <p class="section-number">
-                    05 / CLUB GALLERY
-                </p>
+            <h2>
+                YELLOW
+                <span>BOYS</span>
+            </h2>
 
-                <h2 class="section-title">
-                    YELLOW
-                    <span>BOYS</span>
-                </h2>
-
-            </div>
-
-            <p class="section-intro">
+            <p>
                 Moments from the club,
-                the players and the fans.
+                players and supporters.
             </p>
 
         </div>
@@ -559,23 +514,23 @@
 
         <div class="gallery-grid">
 
-            <div class="gallery-item large">
+            <div class="gallery-main">
                 MATCHDAY
             </div>
 
-            <div class="gallery-item">
+            <div>
                 THE TEAM
             </div>
 
-            <div class="gallery-item">
+            <div>
                 THE FANS
             </div>
 
-            <div class="gallery-item">
+            <div>
                 DEDZA
             </div>
 
-            <div class="gallery-item">
+            <div>
                 YELLOW BOYS
             </div>
 
@@ -586,15 +541,17 @@
 </section>
 
 
-<!-- ================= FANS ================= -->
+<!-- =========================
+     FANS
+========================= -->
 
-<section id="fans" class="fans-section">
+<section class="fans">
 
-    <div class="container fans-content">
+    <div class="container">
 
-        <p class="section-number">
+        <div class="section-label">
             06 / THE YELLOW BOYS
-        </p>
+        </div>
 
         <h2>
             ONE CLUB.
@@ -610,7 +567,7 @@
             href="https://www.facebook.com/profile.php?id=100063608826961"
             target="_blank"
             rel="noopener"
-            class="button button-primary">
+            class="btn btn-yellow">
 
             FOLLOW US ON FACEBOOK
 
@@ -620,10 +577,13 @@
 
 </section>
 
+
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer id="contact">
 
@@ -631,22 +591,13 @@
 
         <div>
 
-            <div class="footer-brand">
+            <div class="footer-logo">
 
-                <div class="brand-badge">
-                    DD
-                </div>
+                <span>DD</span>
 
                 <div>
-
-                    <strong>
-                        DEDZA DYNAMOS
-                    </strong>
-
-                    <span>
-                        GOSHEN CITY FC
-                    </span>
-
+                    <strong>DEDZA DYNAMOS</strong>
+                    <small>GOSHEN CITY FC</small>
                 </div>
 
             </div>
@@ -663,21 +614,10 @@
 
             <h4>CLUB</h4>
 
-            <a href="#club">
-                Our Story
-            </a>
-
-            <a href="#team">
-                First Team
-            </a>
-
-            <a href="#matches">
-                Fixtures
-            </a>
-
-            <a href="#news">
-                News
-            </a>
+            <a href="#club">Our Story</a>
+            <a href="#team">First Team</a>
+            <a href="#matches">Fixtures</a>
+            <a href="#news">News</a>
 
         </div>
 
